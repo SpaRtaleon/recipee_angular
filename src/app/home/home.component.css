@@ -1,0 +1,89 @@
+.toolbar{
+    color: #ee1818;
+    background-color: #ffe7dc;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-width: thin;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toolbar h3{
+    margin-left:2rem;
+  }
+  a{
+    border: none;
+    text-decoration: none;
+    color: initial;
+    margin-right: 2rem;
+  }
+  .loginButton{
+    border: none;
+    background-color: #f13f3c;
+    height: 2rem;
+    border-radius: 1rem;
+    width: 4rem;
+    color: antiquewhite;
+    margin-right: 3rem;
+    box-sizing: content-box;
+  }
+  .avatar{
+      justify-items: center;
+      height: 45px;
+      width: 45px;
+      background-size: cover;
+      /* background-image: url(); */
+      background-position: top center;
+      border-radius: 50%;
+      background-color: #06d6a0;
+      display: flex;
+      justify-content: center;
+      box-shadow: 1px 2px 3px 0px;
+  }
+
+  
+  .page{
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/banner_.png');
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .foodbanner{
+    position: absolute;
+    right: 10%;
+    bottom: 26%;
+  }
+  
+  .chillibanner{
+    width: 10%;
+    position: absolute;
+    right: 8%;
+    transform: rotate(210deg);
+    top: 9%;
+  }
+  .tomatobanner{
+    bottom: 4%;
+    width: 10%;
+    right: 2%;
+    position: absolute;
+  }
+  .basilleaf{
+    bottom: 20%;
+      position: absolute;
+      right: 28%;
+      width: 10%;
+      transform: rotate(30deg);
+  }
+  .greenleaves{
+    position: absolute;
+    width: 10%;
+    transform: rotate(200deg);
+    left: 8%;
+  }
