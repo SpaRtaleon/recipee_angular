@@ -1,55 +1,54 @@
 .toolbar{
-    color: #ee1818;
-    background-color: #ffe7dc;
-    width: 100%;
-    height: 5rem;
+  color: #ee1818;
+  background-color: #ffe7dc; 
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-width: thin;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+.toolbar h3{
+  margin-left:2rem;
+}
+a{
+  border: none;
+  text-decoration: none;
+  color: initial;
+  margin-right: 2rem;
+}
+.loginButton{
+  border: none;
+  background-color: #f13f3c;
+  height: 2rem;
+  border-radius: 1rem;
+  width: 4rem;
+  color: antiquewhite;
+  margin-right: 3rem;
+  box-sizing: content-box;
+}
+.avatar{
+    justify-items: center;
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    /* background-image: url(); */
+    background-position: top center;
+    border-radius: 50%;
+    background-color: #06d6a0;
     display: flex;
-    border-style: solid;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-width: thin;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .toolbar h3{
-    margin-left:2rem;
-  }
-  a{
-    border: none;
-    text-decoration: none;
-    color: initial;
-    margin-right: 2rem;
-  }
-  .loginButton{
-    border: none;
-    background-color: #f13f3c;
-    height: 2rem;
-    border-radius: 1rem;
-    width: 4rem;
-    color: antiquewhite;
-    margin-right: 3rem;
-    box-sizing: content-box;
-  }
-  .avatar{
-      justify-items: center;
-      height: 45px;
-      width: 45px;
-      background-size: cover;
-      /* background-image: url(); */
-      background-position: top center;
-      border-radius: 50%;
-      background-color: #06d6a0;
-      display: flex;
-      justify-content: center;
-      box-shadow: 1px 2px 3px 0px;
-  }
-
-  
+    justify-content: center;
+    box-shadow: 1px 2px 3px 0px;
+}
   .page{
     width: 100%;
     height: 100%;
-    background-image: url('../assets/img/banner_.png');
+    background-image: url('../../assets/img/banner_.png');
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -85,5 +84,144 @@
     position: absolute;
     width: 10%;
     transform: rotate(200deg);
-    left: 8%;
+    left: 5%;
+    top: 3%;
   }
+  .bannercontent h1{
+    line-height: 4rem;
+    font-size: xxx-large;
+}
+    
+  .bannercontent h4{
+    line-height: 2rem;
+    font-weight: normal;
+    width: 28rem;
+  }
+
+  .bannercontent{
+    font-family: Rockwell,'Rockwell regular', monospace;
+    margin: 9rem;
+    width: 40rem;
+    
+  }
+
+
+.category{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+  .card{
+    width: 15rem;
+    text-align: center;
+    padding: 1rem;
+    color: #f13f3c;
+  }
+
+  .card img{
+    width: 15rem;
+  }
+
+
+.categoryfield h2{
+  color: #ee1818;
+  /* font-weight: normal; */
+  margin-left: 5rem;
+  font-family: rockwell;
+  font-weight: normal;
+  
+}
+.categoryfield{
+margin-top: 4rem;
+}
+.titleandsearch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+.search{
+  position: relative;
+  right: 3rem;
+  display: inline-flex;
+  background-color: #fff0e9;
+  border-radius: 1rem;
+  height: 2rem;
+  align-items: center;
+  color: #f35450;
+
+}
+.search input{
+  background-color: #ffe7dc;
+  border: none;
+  width: 20rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: rockwell;
+  height: 2rem;
+  color: #f35450;
+ 
+
+}
+.search input::placeholder{
+  color: #f35450;
+  
+}
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.popularRecipes h2{
+  color: #ee1818;
+  font-family: rockwell;
+  margin-left: 5rem;
+  font-weight: 500;
+}
+.recipes{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff0e9;
+  width: 70%;
+  border-radius:1rem ;
+  margin: 10%;
+}
+
+
+.popularRecipes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+}
+.popularRecipeCard{
+  height: 15rem;
+  position: relative;
+  bottom: 4rem;
+  background-color: #fdd0bb;
+  width: 10rem;
+  border-radius: 1rem;
+  color: #f13f3c;
+  text-align: center;
+  margin: 0.5rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+
+}
+.popularRecipeCard img{
+  width: 7rem;
+  height: 6rem;
+}
