@@ -9,8 +9,9 @@
     <a href="">About us</a>
     <button class="loginButton">Log in</button>
   </div>
-  
+
 </div>
+<div class="container">
   <div class="page">
     <img class="greenleaves" src="../assets/img/green-leaves.png" alt="">
     <img class="foodbanner" src="../assets/img/delicious-food.png" alt="">
@@ -42,22 +43,28 @@
     </div>
 
     <div class="category">
-      <div class="card">
-        <img src="../../assets/img/delicious-food.png" alt="">
-        <h3>Indian</h3>
+      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('catslist')"  ><mat-icon>keyboard_arrow_left</mat-icon></button>
+      
+      <div class="conts"#catslist id="conts">
+        <div class="card" *ngFor="let cat of category">
+          <img src="../../assets/img/delicious-food.png" alt="">
+          <h3>{{cat.title}}</h3>
+        </div>
+        <!-- <div class="card">
+          <img src="../../assets/img/delicious-food.png" alt="">
+          <h3>Chinese</h3>
+        </div>
+        <div class="card">
+          <img src="../../assets/img/delicious-food.png" alt="">
+          <h3>Itali</h3>
+        </div>
+        <div class="card">
+          <img src="../../assets/img/delicious-food.png" alt="">
+          <h3>Thai</h3>
+        </div> -->
       </div>
-      <div class="card">
-        <img src="../../assets/img/delicious-food.png" alt="">
-        <h3>Chinese</h3>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/delicious-food.png" alt="">
-        <h3>Itali</h3>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/delicious-food.png" alt="">
-        <h3>Thai</h3>
-      </div>
+      
+      <button class="categorybutton right"id="slideRight" (click)="scrollRight('catslist')"><mat-icon>keyboard_arrow_right</mat-icon></button>
     </div>
   
   </div>
@@ -67,13 +74,32 @@
       Popular Recipe
     </h2>
     <div class="recipes">
-      <div class="popularRecipeCard">
-        <img src="../../assets/img/spicy-fried-chicken.png" alt="">
-        <h3>
-          Spicy Fried Chicken
-        </h3>
+      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('poplist')"  ><mat-icon>keyboard_arrow_left</mat-icon></button>
+      
+      <div class="pop">
+        <div class="popularScrollcontainer" #poplist>
+          <div class="popularRecipeCard" *ngFor="let popRecipe of popularRecipes">
+            <img src="../../assets/img/Texas_Trash_Pie.webp" alt="">
+            <div class="likes">
+             
+                <div  class="likeicon">
+                  <mat-icon>favorite</mat-icon>
+                </div>
+                
+             
+              {{popRecipe.likes}}
+            </div>
+           
+            <h3>
+              {{popRecipe.recipe_name}}
+            </h3>
+          </div>
+        </div>
+        
       </div>
-      <div class="popularRecipeCard">
+      
+      
+      <!-- <div class="popularRecipeCard">
         <img src="../../assets/img/cooked-fish.png" alt="">
         <h3>
           Cooked Fish 
@@ -90,6 +116,44 @@
         <h3>
           Spicy Fried Chicken
         </h3>
-      </div>
+      </div> -->
+      <button class="categorybutton right"id="slideRight" (click)="scrollRight('poplist')"><mat-icon>keyboard_arrow_right</mat-icon></button>
+      <!-- <div class="popularbackgraound">
+          
+      </div> -->
+    </div>
+
+  </div>
+  <div class="recipeProducts">
+    <div class="search">
+      <input type="search" placeholder="Search for more" (ngModelChange)="searchRecipe(Searchdata)" [(ngModel)]="Searchdata" name="search" id="">
+      <span class="material-symbols-rounded">
+        search
+        </span>
     </div>
   </div>
+  <div class="productFeild" *ngIf="recipes?.length">
+    <div class="productcard"  *ngFor="let recipe of recipes" >
+      <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
+      <div class="productCardCaption">
+        <h3>{{recipe.RecipeName}}</h3>
+
+      </div>
+      </div>
+      
+              
+  </div>
+  <div class="productFeild" *ngIf="!recipes?.length">
+    <div class="notfoundcard"  >
+      <!-- <img src="../../assets/img/Vegetable Lasagna.jpeg" alt=""> -->
+      <div class="noitem">
+        <h3 style="color: #f13f3c;">! No Item Found</h3>
+
+      </div>
+      </div>
+      
+              
+  </div>
+
+</div>
+  

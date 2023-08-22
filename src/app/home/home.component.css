@@ -109,18 +109,34 @@ a{
 .category{
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 5rem 0 5rem;
 }
 
+.conts{
+  display: flex;
+ overflow:hidden ;
+}
+.categorybutton{
+  border: none;
+  height: 6rem;
+  border-radius: 10px;
+  margin: 0 1rem;
+  background-color: #ffff;
+}
+.categorybutton:hover{
+background-color: #fdd0bb;
+}
   .card{
-    width: 15rem;
+    width: 12rem;
     text-align: center;
     padding: 1rem;
     color: #f13f3c;
   }
 
   .card img{
-    width: 15rem;
+    width: 12rem;
   }
 
 
@@ -187,33 +203,48 @@ margin-top: 4rem;
   font-weight: 500;
 }
 .recipes{
+  
+  margin: 5rem 0 0 0;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
+  width: 90%;
   align-items: center;
-  background-color: #fff0e9;
-  width: 70%;
-  border-radius:1rem ;
-  margin: 10%;
+  position: relative;
 }
 
+.likes{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+
+}
+.likeicon{
+  border-radius: 50%;
+  background-color: #fff0e9;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .popularRecipes{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem;
+  margin: 5rem 0 0 0;
 }
 .popularRecipeCard{
   height: 15rem;
   position: relative;
-  bottom: 4rem;
+  /* bottom: 4rem; */
   background-color: #fdd0bb;
-  width: 10rem;
-  border-radius: 1rem;
+  width: 12rem;
+  /* border-radius: 1rem; */
   color: #f13f3c;
   text-align: center;
-  margin: 0.5rem;
+  margin: 1rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -221,7 +252,63 @@ margin-top: 4rem;
   
 
 }
+.popularScrollcontainer{
+  display: flex;
+  overflow: hidden;
+}
+.pop{
+  width: 60%;
+}
 .popularRecipeCard img{
-  width: 7rem;
-  height: 6rem;
+  width: 12rem;
+  height: 10rem;
+}
+.popularbackgraound{
+  background-color: #fff0e9;
+  border-radius: 1rem;
+  width: 70%;
+  height: 20rem;
+  position: absolute;
+  z-index: -1;
+  top: 5rem;
+}
+
+
+.productFeild{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 10rem;
+  width: 80%;
+  justify-content: center;
+}
+
+
+.productcard{
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  height: 14rem;
+  margin: 1rem;
+  border: thin;
+  border-style: ridge;
+  text-align: center;
+
+
+}
+.productcard img{
+height: 10rem;
+width: 12rem;
+}
+.productCardCaption{
+  text-align: center;
+  background-color: #ffe7dc;
+  color: #de4d49;
+  height: inherit;
+}
+
+.recipeProducts{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem 0;
 }
