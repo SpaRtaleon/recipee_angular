@@ -1,16 +1,4 @@
-<div class="toolbar">
-  <h3>Recipee</h3>
-  <span></span>
-  <div class="links">
-    <a href="">Home</a>
-    <a routerLink="/category">Category</a>
-    <a href="">Recipe Blog</a>
-    <a href="">Review</a>
-    <a href="">About us</a>
-    <button class="loginButton">Log in</button>
-  </div>
 
-</div>
 <div class="container">
   <div class="page">
     <img class="greenleaves" src="../assets/img/green-leaves.png" alt="">
@@ -47,8 +35,11 @@
       
       <div class="conts"#catslist id="conts">
         <div class="card" *ngFor="let cat of category">
-          <img src="../../assets/img/delicious-food.png" alt="">
-          <h3>{{cat.title}}</h3>
+          <a routerLink="/category/{{cat.id}}">
+            <img src="../../assets/img/delicious-food.png" alt="">
+            <h3>{{cat.title}}</h3>
+          </a>
+         
         </div>
         <!-- <div class="card">
           <img src="../../assets/img/delicious-food.png" alt="">
@@ -78,7 +69,7 @@
       
       <div class="pop">
         <div class="popularScrollcontainer" #poplist>
-          <div class="popularRecipeCard" *ngFor="let popRecipe of popularRecipes">
+          <a class="popularRecipeCard" *ngFor="let popRecipe of popularRecipes"routerLink="/product/{{popRecipe.recipe_id}}">
             <img src="../../assets/img/Texas_Trash_Pie.webp" alt="">
             <div class="likes">
              
@@ -93,9 +84,8 @@
             <h3>
               {{popRecipe.recipe_name}}
             </h3>
-          </div>
+          </a>
         </div>
-        
       </div>
       
       
@@ -133,7 +123,7 @@
     </div>
   </div>
   <div class="productFeild" *ngIf="recipes?.length">
-    <div class="productcard"  *ngFor="let recipe of recipes" >
+    <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}">
       <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
       <div class="productCardCaption">
         <h3>{{recipe.RecipeName}}</h3>
@@ -156,4 +146,25 @@
   </div>
 
 </div>
-  
+<div>
+  <h2>Recipe Filter</h2>
+  <label for="ingredients">Ingredients:</label>
+  <input type="text" id="ingredients" [(ngModel)]="ingredients" />
+  <br />
+  <label for="categories">Categories:</label>
+  <input type="text" id="categories" [(ngModel)]="categories" />
+  <br />
+  <label for="searchQuery">Search:</label>
+  <input type="text" id="searchQuery" [(ngModel)]="searchQuery" />
+  <br />
+  <button (click)="filterRecipes()">Filter</button>
+</div>
+
+<div *ngIf="recipes?.length > 0">
+  <h3>Filtered Recipes</h3>
+  <ul>
+    <li *ngFor="let recipe of recipes">
+      {{ recipe.RecipeName }}
+    </li>
+  </ul>
+</div>

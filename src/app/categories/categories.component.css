@@ -1,5 +1,5 @@
 
-.toolbar{
+:host ::ng-deep .toolbar  {
   color: #ee1818;
   /* background-color: #ffe7dc;
    */
@@ -128,7 +128,7 @@ a{
   }
   .titleandsearch{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 

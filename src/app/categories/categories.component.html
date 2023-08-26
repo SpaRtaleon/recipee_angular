@@ -1,19 +1,4 @@
 
-<div class="cont">
-  <div class="toolbar">
-    <h3>Recipee</h3>
-    <span></span>
-    <div class="links">
-      <a href="">Home</a>
-      <a routerLink="/category">Category</a>
-      <a href="">Recipe Blog</a>
-      <a href="">Review</a>
-      <a href="">About us</a>
-      <button class="loginButton">Log in</button>
-    </div>
-
-    
-  </div>
   <div class="page">
     <div class="banner-back">
       <!-- css background -->
@@ -21,8 +6,8 @@
     <div class="italianBanner">
      
      <div class="caption">
-      <h1>ITALIAN RECIPE</h1>  
-      <H4>Over 50 popular best italian recipes including comforting pasta, pizza, soup, salad, chicken, beef, appetizers, bread and more delicious italian food!</H4>
+      <h1>{{category?.title}}</h1>  
+      <H4>{{category?.desc}}</H4>
      
      </div>
      <div class="imagalign">
@@ -35,9 +20,9 @@
     <div class="categoryfield">
 
       <div class="titleandsearch">
-        <h2>
+        <!-- <h2>
           Categories
-        </h2>
+        </h2> -->
         <div class="search">
           <input type="search" placeholder="Search for more" name="search" id="">
           <span class="material-symbols-rounded">
@@ -47,7 +32,7 @@
        
       </div>
   
-      <div class="category">
+      <!-- <div class="category">
         <div class="card">
           <img src="../../assets/img/Arugula & Mushroom Breakfast Pizza.jpg" alt="">
           <h3>BreakFast</h3>
@@ -64,51 +49,17 @@
           <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
           <h3>Dinner</h3>
         </div>
-      </div>
+      </div> -->
 
       <div class="productFeild">
-        <div class="productcard">
+        
+        <div class="productcard"  *ngFor="let recipe of recipes" >
           <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
           <div class="productCardCaption">
-            <h3>Simple Italian Biscuit</h3>
-
-          </div>
-          </div>
-          <div class="productcard">
-            <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-            <div class="productCardCaption">
-              <h3>Simple Italian Biscuit</h3>
-  
-            </div>
-            </div>
-            <div class="productcard">
-              <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-              <div class="productCardCaption">
-                <h3>Simple Italian Biscuit</h3>
+            <h3>{{recipe.RecipeName}}</h3>
     
-              </div>
-              </div>
-              <div class="productcard">
-                <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-                <div class="productCardCaption">
-                  <h3>Simple Italian Biscuit</h3>
-      
-                </div>
-                </div>
-                <div class="productcard">
-                  <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-                  <div class="productCardCaption">
-                    <h3>Simple Italian Biscuit</h3>
-        
-                  </div>
-                  </div>
-                  <div class="productcard">
-                    <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-                    <div class="productCardCaption">
-                      <h3>Simple Italian Biscuit</h3>
-          
-                    </div>
-                    </div>
+          </div>
+          </div>
       </div>
   
     
@@ -116,4 +67,4 @@
   
     </div>
 
-</div>
+

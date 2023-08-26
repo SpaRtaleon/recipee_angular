@@ -16,9 +16,13 @@ export class HomeComponent {
   popularRecipes:any;
   recipes:any;
   Searchdata:any;
+  ingredients: string[] = [];
+  categories: string[] = [];
+  searchQuery: string = '';
   ngOnInit() {
     this.apiService.getCategory().subscribe((data:any) => {
       this.category = data;
+      console.log(this.category);
 
     });
 
@@ -33,7 +37,31 @@ export class HomeComponent {
     });
     
   }
-  
+
+  filterRecipes(): void {
+    const queryParams: any = {};
+
+    if (this.ingredients?.length > 0) {
+      queryParams.ingredient = this.ingredients.join(',');
+    }
+
+    if (this.categories?.length > 0) {
+      queryParams.category = this.categories.join(',');
+    }
+
+    if (this.searchQuery.trim() !== '') {
+      queryParams.name = this.searchQuery;
+    }
+
+    this.apiService.getRecipesByFilter(queryParams).subscribe(
+      (response: any) => {
+        this.recipes = response;
+      },
+      (error) => {
+        console.error('Error fetching filtered recipes:', error);
+      }
+    );
+  }
  scrollRight(element: string) {
   if(element=='catslist')
     this.catslist.nativeElement.scrollTo({ left: (this.catslist.nativeElement.scrollLeft + 200), behavior: 'smooth' });
