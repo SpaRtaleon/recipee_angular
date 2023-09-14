@@ -17,9 +17,14 @@ export class ServiceService {
 
 
 
-  register(user: User) {
-      return this.http.post(`${this.apiUrl}/register`, user);
+  register(user: any):Observable<any> {
+  
+    return this.http.post(`${this.apiUrl}/register`, user);
   }
+
+  login(user: any) {
+    return this.http.post(`${this.apiUrl}/login`, user);
+}
   
   getCategory(): Observable<category[]> {
 

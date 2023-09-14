@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit{
       username: [''],
       email: [''],
       phoneNumber: [''],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required]],
       active:[true],
     }); 
   }
@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit{
 
   onSubmit() {
     this.submitted = true;
-
+    console.log('this.registerForm.value',this.registerForm.value);
     // stop here if form is invalid
     if (this.registerForm.invalid) {
         return;

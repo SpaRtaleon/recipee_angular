@@ -1,0 +1,83 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+    /* height: 25rem; */
+    /* background-color: #d6e2e2; */
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  .card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    /* padding: 8rem; */
+    align-items: center;
+    justify-content: space-evenly;
+   
+  }
+  .ss{
+    display: grid;
+    justify-items: center;
+    background-color: #eef3f1;
+    width: 60%;
+   box-shadow: 5px 0px 15px 0px #2325; 
+  }
+  img{
+    width: 100%;
+  }
+  .img{
+    width: 45%;
+  }
+  .container{
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 ;
+       /* height: 100%;
+      background-image: url('../../assets/img/Pizza maker-amico.png');
+      display: grid;
+      background-size: cover;
+      align-items: center;
+      justify-items: center;
+      background-repeat: no-repeat; 
+    background-size: 60% 100%; */
+  }
+  button{
+    border: none;
+    background-color: #6d7ce9;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 2rem;
+    margin:2rem 0;
+  }
+  
+  button:hover{
+    box-shadow: 5px 5px 5px 0px #2325; 
+  }
+  
+  .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    a{
+      text-decoration: none;
+      margin: 2px;
+     
+    }
+  
+    input{
+      height: 2rem;
+      border: none;
+      width: 100%;
+      margin: 1rem;
+      border-radius: 4px;
+    }
+    input:focus{
+      border-bottom: 2px;
+      outline: none;
+      border: aquamarine;
+      border-bottom-style: groove;
+    }

@@ -11,8 +11,12 @@ export class AppComponent implements OnInit{
 
   }
 
+get token(){
+return localStorage.getItem('token');
+}
+  ngOnInit() {
 
-  ngOnInit(): void {
+   
     console.log(this.route.parent);
     
   }

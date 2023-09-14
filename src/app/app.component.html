@@ -23,7 +23,12 @@
       <a href="">Recipe Blog</a>
       <a href="">Review</a>
       <a href="">About us</a>
-      <button class="loginButton" routerLink="/login">Log in</button>
+      <button *ngIf="!token" class="loginButton" routerLink="/login">Log in</button>
+      <span  *ngIf="token" class="material-symbols-outlined">
+        account_circle
+        </span>
+      
+    
     </div>
   
   </div>
