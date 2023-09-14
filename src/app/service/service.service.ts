@@ -26,6 +26,9 @@ export class ServiceService {
     return this.http.post(`${this.apiUrl}/login`, user);
 }
   
+logout() {
+  return this.http.post(`${this.apiUrl}/logout`,'');
+}
   getCategory(): Observable<category[]> {
 
     let headers = new HttpHeaders();
