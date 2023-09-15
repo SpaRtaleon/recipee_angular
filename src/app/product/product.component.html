@@ -1,1 +1,56 @@
-{{recipe|json}}
+
+
+<div class="container">
+    <div class="banner">
+        <div class="bannerContent">
+            <h1>{{recipe?.RecipeName}}</h1>
+            <h4>
+                {{recipe?.RecipeDesc}}
+            </h4>
+            <div class="additional">
+                <div class="duration">
+                    <span class="material-symbols-outlined" style="margin: 5px;">
+                        schedule
+                        </span>{{recipe?.DurationTime}}
+                </div>
+              
+                <div [ngClass]="{'difficulty-moderate': recipe?.Difficulty_Level === 'Moderate', 'difficulty-easy' : recipe?.Difficulty_Level === 'Easy','difficulty-hard': recipe?.Difficulty_Level === 'Hard' }">
+                    <span style="margin: 5px;" > {{recipe?.Difficulty_Level}}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="img">
+            <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
+        </div>
+    </div>
+
+    <div class="ingredientFeild">
+        <h2>Ingredients</h2>
+        <p>*Quantity for 2 Servings </p>
+        <div class="ingredient" >
+            
+           
+            <div class="ingreList" *ngFor="let ingredient of ingredients">
+                <span style="margin: 1rem;">
+                    {{ingredient?.ingredient?.IngredientName}} {{ingredient.quantity}}{{ingredient.unit}}
+                </span>
+            </div>
+            <!-- <h4>Instruction</h4> -->
+          
+        </div>
+       
+        
+    </div>
+
+<div class="directionFeild">
+    <h2>Directions</h2>
+    <div class="instruction"*ngFor="let ins of directions;let i = index">
+        
+        <div class="instruct" *ngIf="ins!=''">
+            Step{{i+1}}:  {{ins}}
+        </div>
+    </div>
+</div>
+</div>
+

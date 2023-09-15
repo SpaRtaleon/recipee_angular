@@ -53,7 +53,7 @@
 
       <div class="productFeild">
         
-        <div class="productcard"  *ngFor="let recipe of recipes" >
+        <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}" >
           <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
           <div class="productCardCaption">
             <h3>{{recipe.RecipeName}}</h3>
