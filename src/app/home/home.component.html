@@ -126,14 +126,49 @@
     </div>
 
   </div>
-  <div class="recipeProducts">
+  
+  <!-- <div class="recipeProducts">
     <div class="search">
       <input type="search" placeholder="Search for more" (ngModelChange)="searchRecipe(Searchdata)" [(ngModel)]="Searchdata" name="search" id="">
       <span class="material-symbols-rounded">
         search
         </span>
     </div>
+  </div> -->
+
+
+
+  <div class="filterRecipe" >
+  <span style="width: 100%;"></span>
+    <mat-select  multiple [(ngModel)]="ingredients" placeholder="Select Ingredients You Have" >
+      <!-- <mat-select-trigger>
+        {{ingredients?.[0] || ''}}
+        <span *ngIf="(ingredients?.length || 0) > 1" class="example-additional-selection">
+          (+{{(ingredients?.length || 0) - 1}} {{ingredients?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger> -->
+      <mat-option *ngFor="let topping of ingredientList" [value]="topping.IngredientName">{{topping.IngredientName}}</mat-option>
+    </mat-select>
+      
+    
+   
+   
+   
+    <mat-select   multiple [(ngModel)]="categories"placeholder="Select Category You Want "  >
+  
+      <mat-option *ngFor="let cat of category" [value]="cat.id">{{cat.title}}</mat-option>
+    </mat-select>
+
+    
+    <input type="text" id="searchQuery"   [(ngModel)]="searchQuery" placeholder="Recipe Name " />
+    <button (click)="filterRecipes()">Search</button>
+    <button (click)="clear()" style="background-color: #e3681bf7;">Clear</button>
+
   </div>
+
+
+
+
   <div class="productFeild" *ngIf="recipes?.length">
     <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}">
       <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
@@ -158,25 +193,5 @@
   </div>
 
 </div>
-<div>
-  <h2>Recipe Filter</h2>
-  <label for="ingredients">Ingredients:</label>
-  <input type="text" id="ingredients" [(ngModel)]="ingredients" />
-  <br />
-  <label for="categories">Categories:</label>
-  <input type="text" id="categories" [(ngModel)]="categories" />
-  <br />
-  <label for="searchQuery">Search:</label>
-  <input type="text" id="searchQuery" [(ngModel)]="searchQuery" />
-  <br />
-  <button (click)="filterRecipes()">Filter</button>
-</div>
 
-<div *ngIf="recipes?.length > 0">
-  <h3>Filtered Recipes</h3>
-  <ul>
-    <li *ngFor="let recipe of recipes">
-      {{ recipe.RecipeName }}
-    </li>
-  </ul>
-</div>
+

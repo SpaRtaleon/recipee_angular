@@ -11,6 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select'
 
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
@@ -38,7 +39,8 @@ import { RegisterComponent } from './register/register.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-
+    MatSelectModule,
+    
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule

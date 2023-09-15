@@ -48,14 +48,11 @@ a{
     justify-content: center;
     box-shadow: 1px 2px 3px 0px;
 }
-.page{
-    height: 100%;
-    width: 100%;
-}
+
 .toolbar{
     background-color: transparent;
 }
-.banner-back{
+/* .banner-back{
     height: 50rem;
     width: 40rem;
     background-color: #ffe7dc;
@@ -65,13 +62,13 @@ a{
     position: absolute;
     border-radius: 12rem 4rem 2rem 26rem;
     z-index: -1;
-}
+} */
 
-.italianBanner img{
+/* .italianBanner img{
   border-radius: 54rem 35rem 61rem 43rem;
   transform: rotate(33deg);
   width: 30rem;
-}
+} */
 .italianBanner{
     display: flex;
     justify-content: space-around;

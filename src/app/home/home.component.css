@@ -281,3 +281,39 @@ width: 12rem;
   justify-content: flex-end;
   margin: 5rem 0;
 }
+
+
+
+  input, mat-select{
+    height: 2rem;
+    border: none;
+    width: 100%;
+    margin: 1rem;
+    border-radius: 4px;
+    background-color: #e8f0fe;
+    font-size: 13px;
+    overflow: hidden;
+    display: grid;
+    
+  }
+  input:focus{
+    border-bottom: 2px;
+    outline: none;
+    border: aquamarine;
+    border-bottom-style: groove;
+  }
+
+  .filterRecipe{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+  }
+ .filterRecipe button{
+  border: none;
+  background-color: #359e47;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 4rem;
+  height: 2rem;
+  margin:0 .5rem;
+ } 

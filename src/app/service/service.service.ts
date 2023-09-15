@@ -29,6 +29,13 @@ export class ServiceService {
 logout() {
   return this.http.post(`${this.apiUrl}/logout`,'');
 }
+
+  getIngredients(): Observable<any[]>{
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.get<any[]>(`${this.apiUrl}/recipe/ingredientList`,{headers:headers});
+  }
+
   getCategory(): Observable<category[]> {
 
     let headers = new HttpHeaders();
