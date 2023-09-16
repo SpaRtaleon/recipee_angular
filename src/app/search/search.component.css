@@ -1,0 +1,44 @@
+
+input,
+mat-select {
+  height: 2rem;
+  border: none;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 4px;
+  background-color: #e8f0fe;
+  font-size: 13px;
+  overflow: hidden;
+  display: grid;
+
+}
+
+input:focus {
+  border-bottom: 2px;
+  outline: none;
+  border: aquamarine;
+  border-bottom-style: groove;
+}
+
+.filterRecipe {
+    margin: 5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.filterRecipe button {
+  border: none;
+  background-color: #359e47;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 4rem;
+  height: 2rem;
+  margin: 0 .5rem;
+}
+.filterField{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}

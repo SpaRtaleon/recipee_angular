@@ -11,13 +11,17 @@ export class AppComponent implements OnInit{
   constructor(private route:ActivatedRoute,private apiService:ServiceService){
 
   }
+  userdata:any;
 
 get token(){
 return localStorage.getItem('token');
 }
   ngOnInit() {
 
-   
+  if(this.token){
+    this.userdata=localStorage.getItem('userData');
+  }
+  this.userdata=JSON.parse(this.userdata);
     console.log(this.route.parent);
     
   }
@@ -30,7 +34,7 @@ return localStorage.getItem('token');
     this.apiService.logout()
     .subscribe(res=>{
       console.log('reslogout',res);
-      localStorage.removeItem('token');
+      localStorage.clear();
     })
   }
 }

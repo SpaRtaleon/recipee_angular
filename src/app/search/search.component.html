@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="filterField">
+        <div class="filterRecipe" >
+            
+              <mat-select  multiple [(ngModel)]="ingredients" placeholder="Select Ingredients You Have" >
+                <!-- <mat-select-trigger>
+                  {{ingredients?.[0] || ''}}
+                  <span *ngIf="(ingredients?.length || 0) > 1" class="example-additional-selection">
+                    (+{{(ingredients?.length || 0) - 1}} {{ingredients?.length === 2 ? 'other' : 'others'}})
+                  </span>
+                </mat-select-trigger> -->
+                <mat-option *ngFor="let topping of ingredientList" [value]="topping.IngredientName">{{topping.IngredientName}}</mat-option>
+              </mat-select>
+                
+              
+             
+             
+             
+              <mat-select   multiple [(ngModel)]="categories"placeholder="Select Category You Want "  >
+            
+                <mat-option *ngFor="let cat of category" [value]="cat.id">{{cat.title}}</mat-option>
+              </mat-select>
+          
+              
+              <input type="text" id="searchQuery"   [(ngModel)]="searchQuery" placeholder="Recipe Name " />
+              <button (click)="filterRecipes()">Search</button>
+              <button (click)="clear()" style="background-color: #e3681bf7;">Clear</button>
+          
+            </div>
+    </div>
+  
+</div>
+

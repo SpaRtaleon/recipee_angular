@@ -13,7 +13,7 @@ export class ServiceService {
 
 
 
-  apiUrl="http://localhost:8000"
+ private  apiUrl="http://localhost:8000"
 
 
 
@@ -23,11 +23,17 @@ export class ServiceService {
   }
 
   login(user: any) {
-    return this.http.post(`${this.apiUrl}/login`, user);
+    return this.http.post(`${this.apiUrl}/login`, user, { withCredentials: true });
 }
-  
+getUser() {
+  let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    const options = { headers: headers, withCredentials: true };
+  return this.http.get(`${this.apiUrl}/user`,options);
+}
+
 logout() {
-  return this.http.post(`${this.apiUrl}/logout`,'');
+  return this.http.post(`${this.apiUrl}/logout`,null,{ withCredentials: true });
 }
 
   getIngredients(): Observable<any[]>{

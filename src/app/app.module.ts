@@ -12,6 +12,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select'
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
 
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +22,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     ProductComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,7 @@ import { RegisterComponent } from './register/register.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatAutocompleteModule,
     
     HttpClientModule,
     FormsModule,

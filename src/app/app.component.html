@@ -1,38 +1,40 @@
 
 
-<!-- <mat-drawer-container class="containere" [hasBackdrop]=true>
-    <mat-drawer #drawer class="drawer" >I'm a drawer</mat-drawer>
-    <mat-drawer-content>
-      <mat-toolbar class="toolbar">
-
-        <div class="avatar" (click)="drawer.toggle()">
-          <img src="../assets/img/cooking (1).png" alt="" >
+<mat-drawer-container class="containere" [hasBackdrop]=true>
+    <mat-drawer #drawer class="drawer"  position="end">
+      <div class="banner">
+        <div class="imgname">
+          <img class="userimg" src="../assets/img/17539364_5881910.png" alt=""><h4>{{userdata.username}}</h4><span class="material-symbols-outlined">
+            edit
+            </span>
         </div>
+     
+      </div>
+      <button class="drawerbutton" >Favorites</button>
+      <button class="drawerbutton" (click)="logout()">LOG OUT</button>
+    
+{{userdata|json}}
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="toolbar" >
+        <h3 routerLink="/" style="cursor: pointer;">Recipee</h3>
+        <span></span>
+        <div class="links">
+          <a href="">Home</a>
+          <a routerLink="/search">Recipes</a>
+          <!-- <a href="">Recipe Blog</a>
+          <a href="">Review</a>
+          <a href="">About us</a> -->
+          <button *ngIf="!token" class="loginButton" routerLink="/login">Log in</button>
+          <span  *ngIf="token" style="vertical-align:middle" class="material-symbols-outlined"  (click)="drawer.toggle()">
+            account_circle
+            </span>
+          
         
-      </mat-toolbar>
-    
-    </mat-drawer-content>
-  </mat-drawer-container> -->
-
-  <div class="toolbar" >
-    <h3>Recipee</h3>
-    <span></span>
-    <div class="links">
-      <a href="">Home</a>
-      <!-- <a routerLink="/category">Category</a> -->
-      <a href="">Recipe Blog</a>
-      <a href="">Review</a>
-      <a href="">About us</a>
-      <button *ngIf="!token" class="loginButton" routerLink="/login">Log in</button>
-      <span  *ngIf="token" style="vertical-align:middle" class="material-symbols-outlined" (click)="logout()">
-        account_circle
-        </span>
+        </div>
       
-    
-    </div>
-  
-  </div>
-<router-outlet></router-outlet>
+      </div>
+      <router-outlet></router-outlet>
 <footer class="footer">
   <div class="container">
    <div class="row">
@@ -80,4 +82,9 @@
      </div>
    </div>
   </div>
-</footer>
+</footer>   
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+ 

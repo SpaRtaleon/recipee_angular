@@ -6,6 +6,53 @@
   font-family: 'Poppins', sans-serif;
 } */
 
+
+
+/* mat drawer */
+
+.drawer{
+  width: 20%;
+}
+
+.banner{
+  width: 100%;
+  background-color: #868a9c;
+  height: 10rem;
+  display: flex;
+  align-items: baseline;
+  align-items: flex-end;
+}
+.drawerbutton{
+  width: 100%;
+  height: 2rem;
+  border: none;
+  margin: 2px;
+  outline: none;
+  background-color: #e0e0e0;
+}
+
+.userimg{
+  width: 4rem;
+  padding: .5rem;
+}
+.imgname{
+  display: flex;
+  align-items: center;
+}
+.imgname h4{
+  font-size: larger;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.name{
+  text-transform: uppercase;
+}
+.drawerbutton:hover{
+ 
+  box-shadow: 5px 5px 5px 0px #2325; 
+}
+/*  */
+
 .toolbar{
   color: #ee1818;
   background-color: #ffe7dc; 
