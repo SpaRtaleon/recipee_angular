@@ -37,14 +37,16 @@
       
       <div class="conts"#catslist id="conts">
    
-          
-        <div class="card" *ngFor="let cat of category">
-          <a routerLink="/category/{{cat.id}}">
-            <img src="../../assets/img/delicious-food.png" alt="">
-            <h3>{{cat.title}}</h3>
-          </a>
-
-        </div>
+          <div *ngFor="let cat of category" >
+            <div class="card" *ngIf="cat.active">
+              <a routerLink="/category/{{cat.id}}">
+                <img src="{{cat.img}}" alt="">
+                <h3>{{cat.title}}</h3>
+              </a>
+    
+            </div>
+          </div>
+        
          
         </div>
         <!-- <div class="card">

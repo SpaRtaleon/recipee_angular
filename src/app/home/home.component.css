@@ -76,6 +76,7 @@
   display: flex;
   overflow: hidden;
   width: 80%;
+  text-transform:capitalize;
 }
 
 .categorybutton {
@@ -100,10 +101,15 @@
 
 .card img {
   width: 12rem;
+  height: 7rem;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 10px #9d9a9a;
+
 }
 
 .card a {
   color: #f13f3c;
+  font-size: 1rem;
 }
 
 .categoryfield h2 {

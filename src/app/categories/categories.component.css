@@ -73,9 +73,11 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 5rem;
 }
 .caption{
-  /* width: 30rem; */
+  width: 30rem;
+  text-shadow: 5px 5px 5px #2327;
 }
 .caption h1{
   color: #f13f3c;
@@ -91,6 +93,11 @@ a{
 
 .imagalign{
   display: grid;
+}
+.imagalign img{
+  width:45rem ;
+  height: 25rem;
+  box-shadow: 5px 0px 15px 0px #2325; 
 }
 
 .category{

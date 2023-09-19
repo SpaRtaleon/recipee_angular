@@ -134,4 +134,6 @@ export interface category {
   id: Number;
   title: String;
   img: String;
+  active:boolean;
+  desc:string
 }
