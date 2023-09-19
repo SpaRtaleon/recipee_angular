@@ -32,7 +32,6 @@ export class RegisterComponent implements OnInit{
 
   onSubmit() {
     this.submitted = true;
-    console.log('this.registerForm.value',this.registerForm.value);
     // stop here if form is invalid
     if (this.registerForm.invalid) {
         return;
@@ -42,11 +41,10 @@ export class RegisterComponent implements OnInit{
     this.authService.register(this.registerForm.value)
         .subscribe(
             data => {
-                console.log('userdata',data);
                 this.router.navigate(['/login']);
             },
             error => {
-              console.log('error',error);
+             
                 this.loading = false;
             });
 }

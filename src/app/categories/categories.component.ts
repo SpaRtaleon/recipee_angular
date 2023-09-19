@@ -13,15 +13,12 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id']; 
-      console.log(id);
       if(id){
         this.apiService.getCat(id).subscribe((data)=>{
           this.category=data
-          console.log(this.category,"category");
         });
         this.apiService.getRecipesByCategory(id).subscribe((data)=>{
           this.recipes=data
-          console.log(this.recipes,"recipeee");
         });
       }
     });
