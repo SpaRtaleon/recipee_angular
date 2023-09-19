@@ -13,7 +13,8 @@ export class ServiceService {
 
 
 
- private  apiUrl="http://localhost:8000"
+//  private  apiUrl="http://localhost:8000"
+    private  apiUrl="https://recipee-angular.vercel.app/"
 
 
 
