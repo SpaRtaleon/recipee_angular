@@ -111,6 +111,9 @@
   color: #f13f3c;
   font-size: 1rem;
 }
+.card h3{
+  text-shadow: 10px 10px 10px #2327;
+}
 
 .categoryfield h2 {
   color: #ee1818;
