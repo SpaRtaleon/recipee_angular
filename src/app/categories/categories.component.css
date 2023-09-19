@@ -88,7 +88,8 @@ a{
     line-height: 2rem;
     letter-spacing: 1px;
     font-weight: normal;
-    width: 30rem;
+    width: 34rem;
+    text-align: justify;
 }
 
 
