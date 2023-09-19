@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from './service/service.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,8 +19,10 @@ return localStorage.getItem('token');
 
   if(this.token){
     this.userdata=localStorage.getItem('userData');
+    this.userdata=JSON.parse(this.userdata);
+
   }
-  this.userdata=JSON.parse(this.userdata);
+  
   
     
   }
