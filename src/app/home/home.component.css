@@ -11,7 +11,7 @@
 .foodbanner {
   position: absolute;
   right: 10%;
-  top: 9rem;
+  top: 9vw;
   width: 20%;
 }
 
@@ -47,20 +47,22 @@
 }
 
 .bannercontent h1 {
-  line-height: 4rem;
-  font-size: xxx-large;
+  line-height: 4vw;
+  font-size: 3vw;
 }
 
 .bannercontent h4 {
-  line-height: 2rem;
+  line-height: 2vw;
   font-weight: normal;
-  width: 28rem;
+  width: 28vw;
+  font-size: 1vw;
+  text-align: justify;
 }
 
 .bannercontent {
   font-family: Rockwell, 'Rockwell regular', monospace;
-  margin: 9rem;
-  width: 40rem;
+  margin: 10vw;
+  max-width: 50%;
 
 }
 
@@ -70,7 +72,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  margin: 2rem 5rem 0 5rem;
+  margin: 2vw 5vw 0 5vw;
 }
 
 .conts {
@@ -84,7 +86,7 @@
   border: none;
   height: 6rem;
   border-radius: 10px;
-  margin: 0 1rem;
+  margin: 0 1vw;
   background-color: #ffff;
 }
 
@@ -94,23 +96,23 @@
 }
 
 .card {
-  width: 12rem;
+  width: 13vw;
   text-align: center;
-  padding: 1rem;
+  padding: 1vw;
   color: #f13f3c;
 }
 
 .card img {
-  width: 12rem;
-  height: 7rem;
-  border-radius: 1rem;
+  width: 12vw;
+  height: 7vw;
+  border-radius: 1vw;
   box-shadow: 10px 10px 10px #9d9a9a;
 
 }
 
 .card a {
   color: #f13f3c;
-  font-size: 1rem;
+  font-size: 1vw;
 }
 .card h3{
   text-shadow: 10px 10px 10px #2327;
@@ -119,20 +121,21 @@
 .categoryfield h2 {
   color: #ee1818;
   /* font-weight: normal; */
-  margin-left: 5rem;
+  margin-left: 5vw;
   font-family: rockwell;
   font-weight: normal;
 
 }
 
 .categoryfield {
-  margin-top: 4rem;
+  margin-top: 4vw;
 }
 
 .titleandsearch {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.2vw;
 }
 
 
@@ -182,13 +185,14 @@ a {
 .popularRecipes h2 {
   color: #ee1818;
   font-family: rockwell;
-  margin-left: 5rem;
+  margin-left: 5vw;
   font-weight: 500;
+  font-size: 1.5vw;
 }
 
 .recipes {
 
-  margin: 5rem 0 0 0;
+  margin: 5vw 0 0 0;
   display: flex;
   justify-content: center;
   width: 90%;
@@ -198,8 +202,8 @@ a {
 
 .likes {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1vw;
+  right: 1vw;
   display: grid;
 
 }
@@ -207,8 +211,8 @@ a {
 .likeicon {
   border-radius: 50%;
   background-color: #fff0e9;
-  width: 2rem;
-  height: 2rem;
+  width: 2vw;
+  height: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,19 +222,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0 0 0;
+  margin: 5vw 0 0 0;
 }
 
 .popularRecipeCard {
-  /* height: 15rem; */
   position: relative;
-  /* bottom: 4rem; */
   background-color: #fdd0bb;
-  width: 12rem;
-  /* border-radius: 1rem; */
+  width: 12vw;
+  height: 13vw;
   color: #f13f3c;
   text-align: center;
-  margin: 1rem;
+  margin: 1vw;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -247,10 +249,12 @@ a {
 .pop {
   width: 60%;
 }
-
+.popularRecipeCard h3{
+  font-size: 1vw;
+}
 .popularRecipeCard img {
-  width: 12rem;
-  height: 10rem;
+  width: 12vw;
+  height: 30vh;
 }
 
 .popularbackgraound {
@@ -354,3 +358,15 @@ input:focus {
   margin: 0 .5rem;
 }
 /* --------- */
+
+
+@media  screen and (max-width:600px){
+
+}
+
+@media  screen and (max-width:768px){
+
+.bannercontent h4{
+
+}
+}
