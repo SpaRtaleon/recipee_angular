@@ -1,15 +1,16 @@
 
 input,
 mat-select {
-  height: 2rem;
+  height: 2vw;
   border: none;
   width: 100%;
-  margin: 1rem;
+  margin: 1vw;
   border-radius: 4px;
   background-color: #e8f0fe;
-  font-size: 13px;
+  font-size: 0.9vw;
   overflow: hidden;
   display: grid;
+  align-content: center;
 
 }
 
@@ -21,10 +22,9 @@ input:focus {
 }
 
 .filterRecipe {
-    margin: 5rem 0 0 0;
-    display: flex;
-    align-items: center;
-    width: 70%;
+  margin: 5vw 5vw 0 0;
+  display: flex;
+  align-items: center;
 }
 
 .filterRecipe button {
@@ -32,13 +32,37 @@ input:focus {
   background-color: #359e47;
   color: aliceblue;
   border-radius: 10px;
-  width: 4rem;
-  height: 2rem;
-  margin: 0 .5rem;
+  width: 4vw;
+  height: 2vw;
+  font-size: 1vw;
+  margin: 0 0.5vw;
 }
 .filterField{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+
+@media(max-width: 600px){
+  input, mat-select{
+    width: 40%;
+    margin: 1vw;
+    padding: 2vw;
+    font-size: 2vw;
+  }
+  
+  .filterRecipe{
+    margin: 5vw;
+    flex-wrap: wrap;
+  
+  }
+  
+  .filterRecipe button{
+    width: 10vw;
+    height: 4vw;
+    font-size: 2vw;
+  }
+  
 }

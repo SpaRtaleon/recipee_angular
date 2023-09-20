@@ -374,8 +374,9 @@ input:focus {
     height: 70vw;
   }
   .bannercontent h1{
-    line-height: 9vw;
-    font-size: 6vw;
+    font-family: Rockwell, 'Rockwell regular', monospace;
+    line-height: 10vw;
+    font-size: 7vw;
   }
 
   .bannercontent h4{
@@ -434,18 +435,24 @@ input:focus {
     width: 70%;
   }
   .popularRecipeCard{
-    width: 25vw;
-    height: 30vw;
-    margin: 2vw;
+    width: 30vw;
+    height: 35vw;
+    margin: 1vw;
   }
   .popularRecipeCard img{
-    width: 25vw;
+    width: 30vw;
     height: 30vh;
   }
 .likes{
-  font-size: 2vw;
+  font-size: 3vw;
 }
-
+.heart{
+  font-size: 4vw;height: auto;width: auto;
+}
+.likeicon{
+  width: 4vw;
+  height: 4vw;
+}
 .popularRecipeCard h3{
   font-size: 3vw;
 }
