@@ -17,14 +17,14 @@
 .banner{
   width: 100%;
   background-color: #868a9c;
-  height: 10rem;
+  height: 10vw;
   display: flex;
   align-items: baseline;
   align-items: flex-end;
 }
 .drawerbutton{
   width: 100%;
-  height: 2rem;
+  height: 2vw;
   border: none;
   margin: 2px;
   outline: none;
@@ -32,8 +32,8 @@
 }
 
 .userimg{
-  width: 4rem;
-  padding: .5rem;
+  width: 4vw;
+  padding: .5vw;
 }
 .imgname{
   display: flex;
@@ -120,18 +120,18 @@ ul{
 }
 .footer{
   background-color: #dad9d9;
-  padding: 70px 0;
-  margin-top: 5rem;
+  padding: 2vw 0;
+  margin-top: 10vw;
 }
 .footer-col{
    width: 25%;
-   padding: 0 15px;
+   padding: 0 1vw;
 }
 .footer-col h4{
-  font-size: 18px;
+  font-size: 1.5vw;
   color: #24262b;
   text-transform: capitalize;
-  margin-bottom: 35px;
+  margin-bottom: 3vw;
   font-weight: 500;
   position: relative;
 }
@@ -149,8 +149,7 @@ ul{
   margin-bottom: 10px;
 }
 .footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
+  font-size: 1vw;
   color: #333438;
   text-decoration: none;
   font-weight: 300;
@@ -160,16 +159,16 @@ ul{
 }
 .footer-col ul li a:hover{
   color: #272626;
-  padding-left: 8px;
+  padding-left: 1vw;
 }
 .footer-col .social-links a{
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 2vw;
+  width: 2vw;
   background-color: rgba(255,255,255,0.2);
   margin:0 10px 10px 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 2vw;
   border-radius: 50%;
   color: #cf6d6d;
   transition: all 0.5s ease;
@@ -193,7 +192,19 @@ ul{
     margin-bottom: 30px;
 }
 }
-@media(max-width: 574px){
+@media(max-width: 600px){
+
+
+  .toolbar{
+
+    height: 10vw;
+    font-size: 2vw;
+  }
+  .loginButton{
+    height: 3vw;
+    width: 6vw;
+    font-size: 1.5vw;
+  }
   .footer-col{
     width: 100%;
 }

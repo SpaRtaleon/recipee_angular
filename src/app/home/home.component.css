@@ -272,8 +272,9 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 2rem 10rem;
+  margin: 2vw 10vw;
   width: 80%;
+  background-color: #e8f0fe;
   justify-content: flex-start;
 }
 
@@ -281,9 +282,9 @@ a {
 .productcard {
   display: flex;
   flex-direction: column;
-  width: 16rem;
-  height: 8rem;
-  margin: 1rem;
+  width: 16vw;
+  height: 100%;
+  margin: 1vw;
   border: thin;
   border-style: ridge;
   text-align: center;
@@ -302,36 +303,38 @@ a {
 }
 
 .productcard img {
-  height: 10rem;
-  width: 16rem;
+  height: 10vw;
+  width: 16vw;
 }
 
 .productCardCaption {
   text-align: center;
   background-color: #ffe7dc;
   color: #de4d49;
+  font-size: 1vw;
 
 }
 
 .recipeProducts {
   display: flex;
   justify-content: flex-end;
-  margin: 5rem 0;
+  margin: 5vw 0;
 }
 
 /* filter recipe */
 
 input,
 mat-select {
-  height: 2rem;
+  height: 2vw;
   border: none;
   width: 100%;
-  margin: 1rem;
+  margin: 1vw;
   border-radius: 4px;
   background-color: #e8f0fe;
-  font-size: 13px;
+  font-size: 0.9vw;
   overflow: hidden;
   display: grid;
+  align-content: center;
 
 }
 
@@ -343,7 +346,7 @@ input:focus {
 }
 
 .filterRecipe {
-  margin: 5rem 5rem 0 0;
+  margin: 5vw 5vw 0 0;
   display: flex;
   align-items: center;
 }
@@ -353,13 +356,112 @@ input:focus {
   background-color: #359e47;
   color: aliceblue;
   border-radius: 10px;
-  width: 4rem;
-  height: 2rem;
-  margin: 0 .5rem;
+  width: 4vw;
+  height: 2vw;
+  font-size: 1vw;
+  margin: 0 0.5vw;
 }
 /* --------- */
 
+@media(max-width: 600px){
+  .bannercontent{
+    max-width: 60%;
+    margin: 15vw 0 5vw 10vw;
+  }
+  .bannercontent h1{
+    line-height: 7vw;
+    font-size: 4vw;
+  }
 
+  .bannercontent h4{
+    line-height: 4vw;
+    font-weight: normal;
+    width: 55vw;
+    font-size: 2vw;
+    text-align: justify;
+}
+.foodbanner {
+  position: absolute;
+  right: 10%;
+  top: 13vw;
+  width: 30%;
+}
+.basilleaf{
+  bottom: 15%;
+}
+.titleandsearch{
+  justify-content: center;
+  font-size: 2.5vw;
+}
+.categorybutton{
+  display: none;
+}
+.conts,.popularScrollcontainer{
+  overflow: scroll;
+}
+.card{
+  width: 30vw;
+  padding: 2vw;
+}
+.card a{
+  font-size: 2vw;
+}
+.card img{
+  width: 30vw;
+  height: 15vw;
+  border-radius: 2vw;
+}
+.card h3, .popularRecipes h2 {
+  font-size: 3vw;
+}
+  .footer-col{
+    width: 100%;
+  }
+  .popularRecipeCard{
+    width: 20vw;
+    height: 22vw;
+    margin: 2vw;
+  }
+  .popularRecipeCard img{
+    width: 20vw;
+    height: 30vh;
+  }
+.likes,.popularRecipeCard h3{
+  font-size: 2vw;
+}
+
+
+.productcard img {
+  height: 20vw;
+  width: 24vw;
+}
+.productcard{
+  width: 24vw;
+}
+.productCardCaption{
+  font-size: 2vw;
+}
+
+input, mat-select{
+  width: 45%;
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+.filterRecipe{
+  margin: 2vw 10vw;
+  flex-wrap: wrap;
+
+}
+
+.filterRecipe button{
+  width: 9vw;
+  height: 3vw;
+  font-size: 2vw;
+}
+
+}
 @media  screen and (max-width:600px){
 
 }
