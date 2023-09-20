@@ -1,11 +1,11 @@
 
 <div class="container">
   <div class="page">
-    <img class="greenleaves" src="../assets/img/green-leaves.png" alt="">
-    <img class="foodbanner" src="../assets/img/delicious-food.png" alt="">
-    <img class="chillibanner"src="../assets/img/red-chili-pepper.png" alt="">
-    <img class="tomatobanner"src="../assets/img/sliced-tomato.png" alt="">
-    <img class="basilleaf"src="../assets/img/basil-leaf.png" alt="">
+    <img class="greenleaves" src="../assets/img/green-leaves.webp" alt="">
+    <img class="foodbanner" src="../assets/img/delicious-food.webp" alt="">
+    <img class="chillibanner"src="../assets/img/red-chili-pepper.webp" alt="">
+    <img class="tomatobanner"src="../assets/img/sliced-tomato.webp" alt="">
+    <img class="basilleaf"src="../assets/img/basil-leaf.webp" alt="">
     <div class="bannercontent">
       <h1>Experience The <br> <span style="color: #ee1818;">
         Delicious Recipe
@@ -21,12 +21,12 @@
       <h2>
         Categories
       </h2>
-      <div class="search">
+      <!-- <div class="search">
         <input type="search" placeholder="Search for more" name="search" id="">
         <span class="material-symbols-rounded">
           search
           </span>
-      </div>
+      </div> -->
      
     </div>
 
@@ -49,18 +49,7 @@
         
          
         </div>
-        <!-- <div class="card">
-          <img src="../../assets/img/delicious-food.png" alt="">
-          <h3>Chinese</h3>
-        </div>
-        <div class="card">
-          <img src="../../assets/img/delicious-food.png" alt="">
-          <h3>Itali</h3>
-        </div>
-        <div class="card">
-          <img src="../../assets/img/delicious-food.png" alt="">
-          <h3>Thai</h3>
-        </div> -->
+       
   
       
       <button class="categorybutton right"id="slideRight" (click)="scrollRight('catslist')"><span class="material-symbols-outlined">
@@ -82,7 +71,7 @@
       <div class="pop">
         <div class="popularScrollcontainer" #poplist>
           <a class="popularRecipeCard" *ngFor="let popRecipe of popularRecipes"routerLink="/product/{{popRecipe.recipe_id}}">
-            <img src="../../assets/img/Texas_Trash_Pie.webp" alt="">
+            <img src="{{popRecipe.ImageUrl}}" alt="">
             <div class="likes">
              
                 <div  class="likeicon">

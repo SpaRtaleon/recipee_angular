@@ -32,31 +32,14 @@
        
       </div>
   
-      <!-- <div class="category">
-        <div class="card">
-          <img src="../../assets/img/Arugula & Mushroom Breakfast Pizza.jpg" alt="">
-          <h3>BreakFast</h3>
-        </div>
-        <div class="card">
-          <img src="../../assets/img/italian lunch.jpeg" alt="">
-          <h3>Lunch</h3>
-        </div>
-        <div class="card">
-          <img src="../../assets/img/italian snacks.jpeg" alt="">
-          <h3>Snacks</h3>
-        </div>
-        <div class="card">
-          <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
-          <h3>Dinner</h3>
-        </div>
-      </div> -->
+  
 
       <div class="productFeild">
         
         <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}" >
-          <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
+          <img src="{{recipe.ImageUrl}}" alt="">
           <div class="productCardCaption">
-            <h3>{{recipe.RecipeName}}</h3>
+            <h3>{{recipe?.RecipeName}}</h3>
     
           </div>
           </div>

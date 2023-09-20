@@ -11,7 +11,7 @@
                 <div class="duration">
                     <span class="material-symbols-outlined" style="margin: 5px;">
                         schedule
-                        </span>{{recipe?.DurationTime}}
+                        </span>{{recipe.DurationTime}}
                 </div>
               
                 <div [ngClass]="{'difficulty-moderate': recipe?.Difficulty_Level === 'Moderate', 'difficulty-easy' : recipe?.Difficulty_Level === 'Easy','difficulty-hard': recipe?.Difficulty_Level === 'Hard' }">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="img">
-            <img src="../../assets/img/Vegetable Lasagna.jpeg" alt="">
+            <img src="{{recipe.ImageUrl}}" alt="">
         </div>
     </div>
 
@@ -33,7 +33,7 @@
            
             <div class="ingreList" *ngFor="let ingredient of ingredients">
                 <span style="margin: 1rem;">
-                    {{ingredient?.ingredient?.IngredientName}} {{ingredient.quantity}}{{ingredient.unit}}
+                    {{ingredient.ingredient.IngredientName}} {{ingredient.quantity}}{{ingredient.unit}}
                 </span>
             </div>
             <!-- <h4>Instruction</h4> -->

@@ -182,18 +182,19 @@ a{
 .productcard{
   display: flex;
   flex-direction: column;
-  width: 12rem;
-  height: 14rem;
+  width: 16rem;
+  height: 8rem;
   margin: 1rem;
   border: thin;
   border-style: ridge;
   text-align: center;
 
 
+
 }
 .productcard img{
-height: 10rem;
-width: 12rem;
+  height: 10rem;
+  width: 16rem;
 }
 .productCardCaption{
   text-align: center;

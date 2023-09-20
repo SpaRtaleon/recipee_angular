@@ -43,11 +43,11 @@ export class LoginComponent implements OnInit{
                 this.authService.getUser()
                 .subscribe((data:any)=>{
                   this.userdata=data;
-                  console.log('userdata',this.userdata);
+                  
                   localStorage.setItem('userData',JSON.stringify(this.userdata));
                 })
                
-                console.log('logindata',data);
+              
                 this.router.navigate(['']);
                 localStorage.setItem('token',data.token);
 
