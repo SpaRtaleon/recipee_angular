@@ -198,15 +198,20 @@ ul{
   .toolbar{
 
     height: 10vw;
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .loginButton{
-    height: 3vw;
-    width: 6vw;
-    font-size: 1.5vw;
+    height: 6vw;
+    width: 12vw;
+    font-size: 3vw;
   }
+
   .footer-col{
     width: 100%;
+}
+
+.footer-col h4,.footer-col ul li a{
+  font-size: 3vw
 }
 }
 

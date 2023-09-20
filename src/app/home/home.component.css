@@ -365,33 +365,39 @@ input:focus {
 
 @media(max-width: 600px){
   .bannercontent{
-    max-width: 60%;
+    max-width: 100%;
     margin: 15vw 0 5vw 10vw;
+    position: absolute;
+    top: -5vw;
+  }
+  .page{
+    height: 70vw;
   }
   .bannercontent h1{
-    line-height: 7vw;
-    font-size: 4vw;
+    line-height: 9vw;
+    font-size: 6vw;
   }
 
   .bannercontent h4{
     line-height: 4vw;
     font-weight: normal;
     width: 55vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: justify;
 }
 .foodbanner {
   position: absolute;
-  right: 10%;
+  right: 8%;
   top: 13vw;
   width: 30%;
 }
-.basilleaf{
-  bottom: 15%;
+.tomatobanner,.greenleaves,.basilleaf{
+  width: 15%;
 }
+
 .titleandsearch{
   justify-content: center;
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 .categorybutton{
   display: none;
@@ -399,70 +405,87 @@ input:focus {
 .conts,.popularScrollcontainer{
   overflow: scroll;
 }
+.conts{
+  width: 90%;
+}
 .card{
-  width: 30vw;
+  width: 40vw;
   padding: 2vw;
 }
 .card a{
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .card img{
-  width: 30vw;
-  height: 15vw;
+  width: 40vw;
+  height: 20vw;
   border-radius: 2vw;
 }
-.card h3, .popularRecipes h2 {
-  font-size: 3vw;
+.card h3 {
+  font-size: 3.5vw;
+}
+.popularRecipes h2{
+  font-size: 4.5vw;
+
 }
   .footer-col{
     width: 100%;
   }
+  .pop{
+    width: 70%;
+  }
   .popularRecipeCard{
-    width: 20vw;
-    height: 22vw;
+    width: 25vw;
+    height: 30vw;
     margin: 2vw;
   }
   .popularRecipeCard img{
-    width: 20vw;
+    width: 25vw;
     height: 30vh;
   }
-.likes,.popularRecipeCard h3{
+.likes{
   font-size: 2vw;
 }
 
+.popularRecipeCard h3{
+  font-size: 3vw;
+}
 
+.productFeild{
+  width: 90%;
+  margin: 5vw;
+}
 .productcard img {
-  height: 20vw;
-  width: 24vw;
+  height: 22vw;
+  width: 26vw;
 }
 .productcard{
-  width: 24vw;
+  width: 26vw;
 }
 .productCardCaption{
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 input, mat-select{
-  width: 45%;
+  width: 40%;
   margin: 1vw;
-  padding: 1vw;
-  font-size: 1.5vw;
+  padding: 2vw;
+  font-size: 2vw;
 }
 
 .filterRecipe{
-  margin: 2vw 10vw;
+  margin: 5vw;
   flex-wrap: wrap;
 
 }
 
 .filterRecipe button{
-  width: 9vw;
-  height: 3vw;
+  width: 10vw;
+  height: 4vw;
   font-size: 2vw;
 }
 
 }
-@media  screen and (max-width:600px){
+/* @media  screen and (max-width:600px){
 
 }
 
@@ -471,4 +494,4 @@ input, mat-select{
 .bannercontent h4{
 
 }
-}
+} */
