@@ -14,8 +14,8 @@ export class ServiceService {
 
 
 
- private  apiUrl="http://localhost:8000"
-    // private  apiUrl="https://recipee-django.vercel.app"
+//  private  apiUrl="http://localhost:8000"
+    private  apiUrl="https://recipee-django.vercel.app"
 
 
 
@@ -25,7 +25,7 @@ export class ServiceService {
   }
 
   login(user: any) {
-    return this.http.post(`${this.apiUrl}/login`, user, { withCredentials: true });
+    return this.http.post(`${this.apiUrl}/login`, user, { withCredentials: true })
     // .pipe(
     //   catchError((err) => {
     //     console.log('error caught in service')
