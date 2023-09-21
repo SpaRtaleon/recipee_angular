@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';//k8q
 import { HttpClient,HttpHeaders, HttpParams  } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { category } from '../home/home.component';
 import { User } from '../models/user';
+import { ToastrService } from 'ngx-toastr';
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private toastr: ToastrService) { }
 
 
 
 
-//  private  apiUrl="http://localhost:8000"
-    private  apiUrl="https://recipee-django.vercel.app"
+ private  apiUrl="http://localhost:8000"
+    // private  apiUrl="https://recipee-django.vercel.app"
 
 
 
@@ -25,6 +26,16 @@ export class ServiceService {
 
   login(user: any) {
     return this.http.post(`${this.apiUrl}/login`, user, { withCredentials: true });
+    // .pipe(
+    //   catchError((err) => {
+    //     console.log('error caught in service')
+    //     console.error(err);
+    //     this.toastr.error(err);
+    //     //Handle the error here
+
+    //     return throwError(err);    //Rethrow it back to component
+    //   })
+    //   )
 }
 getUser() {
   let headers = new HttpHeaders();

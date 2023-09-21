@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../service/service.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class LoginComponent implements OnInit{
   
 
-  constructor(private formB:FormBuilder,private authService:ServiceService,private router:Router){
+  constructor(private formB:FormBuilder,private authService:ServiceService,private router:Router,private toastr: ToastrService){
 
   }
   userdata: any;
@@ -31,7 +32,9 @@ export class LoginComponent implements OnInit{
 
     // stop here if form is invalid
     console.log('this.loginForm.invalid',this.loginForm.invalid);
+   
     if (this.loginForm.invalid) {
+      this.toastr.error("Please Fill The Form !");
         return;
     }
 
@@ -39,7 +42,7 @@ export class LoginComponent implements OnInit{
     this.authService.login(this.loginForm.value)
         .subscribe(
             (data:any) => {
-              
+              this.toastr.success('Login Success !');
                 this.authService.getUser()
                 .subscribe((data:any)=>{
                   this.userdata=data;
@@ -52,8 +55,8 @@ export class LoginComponent implements OnInit{
                 localStorage.setItem('token',data.token);
 
             },
-            error => {
-              console.log('error',error);
+            httpErrorResponse => {
+              this.toastr.error(httpErrorResponse.error.detail);
                 this.loading = false;
             });
   }

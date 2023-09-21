@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServiceService } from '../service/service.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +25,7 @@ export class RegisterComponent implements OnInit{
       active:[true],
     }); 
   }
-  constructor(private formB:FormBuilder,private router:Router,private authService:ServiceService){
+  constructor(private formB:FormBuilder,private router:Router,private authService:ServiceService,private toastr:ToastrService){
 
   }
  
@@ -34,6 +35,7 @@ export class RegisterComponent implements OnInit{
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
+      this.toastr.error("Please Fill The Form !");
         return;
     }
 

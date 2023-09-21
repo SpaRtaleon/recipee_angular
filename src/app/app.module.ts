@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
@@ -13,7 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select'
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-
+import { ToastrModule, provideToastr } from 'ngx-toastr';
 
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
@@ -45,12 +45,18 @@ import { SearchComponent } from './search/search.component';
     MatInputModule,
     MatSelectModule,
     MatAutocompleteModule,
+    ToastrModule.forRoot(),
     
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+
+    provideAnimations(), // required animations providers
+    provideToastr(),
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
