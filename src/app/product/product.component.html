@@ -9,9 +9,11 @@
             </h4>
             <div class="additional">
                 <div class="duration">
-                    <span class="material-symbols-outlined" style="margin: 5px;">
+                    <!-- <span class="material-symbols-outlined" style="margin: 5px;">
                         schedule
-                        </span>{{recipe.DurationTime}}
+                        </span> -->
+                        <img src="../../assets/img/time-svgrepo-com.svg"style="margin: 5px;width: 25%;" alt="">
+                        {{recipe?.DurationTime}}
                 </div>
               
                 <div [ngClass]="{'difficulty-moderate': recipe?.Difficulty_Level === 'Moderate', 'difficulty-easy' : recipe?.Difficulty_Level === 'Easy','difficulty-hard': recipe?.Difficulty_Level === 'Hard' }">
@@ -21,7 +23,7 @@
             </div>
         </div>
         <div class="img">
-            <img src="{{recipe.ImageUrl}}" alt="">
+            <img class="bannerImg" src="{{recipe.ImageUrl}}" alt="">
         </div>
     </div>
 

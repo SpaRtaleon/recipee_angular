@@ -77,7 +77,7 @@ a{
 }
 .caption{
   width: 30vw;
-  text-shadow: 5px 5px 5px #2327;
+  /* text-shadow: 5px 5px 5px #2327; */
 }
 .caption h1{
   color: #f13f3c;
@@ -186,21 +186,25 @@ a{
 .productcard{
   display: flex;
   flex-direction: column;
-  width: 16vw;
-  height: 8vw;
+  width: 13vw;
+  height: 100%;
   margin: 1vw;
   text-align: center;
+  
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 0px #2325;
 
 
 
 }
 .productcard img{
   height: 10vw;
-  width: 16vw;
+  width: 13vw;
 }
 .productCardCaption{
   text-align: center;
-  background-color: #ffe7dc;
+  /* background-color: #ffe7dc; */
+  background-color: #efedec;
   color: #de4d49;
 }
 
@@ -227,15 +231,19 @@ a{
     font-size: 3vw;
   }
   .productcard{
-    width: 30vw;
-    height: 30vw;
+    width: 38vw;
+  height: 42vw;
+  margin: 3vw;
   }
   .productcard img{
-    width: 30vw;
+    border-radius: 5px 5px 0 0;
     height: 30vw;
+    width:38vw;
   }
   .productCardCaption{
-    font-size: 3vw;
+    background-color: #efedec;
+  font-size: 2.5vw;
+  border-radius: 5px 5px 0 0;
 
   }
   .material-symbols-rounded{

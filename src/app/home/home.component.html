@@ -31,9 +31,12 @@
     </div>
 
     <div class="category">
-      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('catslist')"  ><span class="material-symbols-outlined">
+      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('catslist')"  >
+        <!-- <span class="material-symbols-outlined">
         chevron_left
-        </span></button>
+        </span> -->
+        <img src="../../assets/img/arrow-prev-small-svgrepo-com.svg" alt="">
+      </button>
       
       <div class="conts"#catslist id="conts">
    
@@ -52,9 +55,12 @@
        
   
       
-      <button class="categorybutton right"id="slideRight" (click)="scrollRight('catslist')"><span class="material-symbols-outlined">
+      <button class="categorybutton right"id="slideRight" (click)="scrollRight('catslist')">
+        <!-- <span class="material-symbols-outlined">
         chevron_right
-        </span></button>
+        </span> -->
+        <img src="../../assets/img/arrow-next-small-svgrepo-com.svg" alt="">
+      </button>
     </div>
   
   </div>
@@ -64,18 +70,22 @@
       Popular Recipe
     </h2>
     <div class="recipes">
-      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('poplist')"  ><span class="material-symbols-outlined">
+      <button class="categorybutton left"id="slideLeft" (click)="scrollLeft('poplist')"  >
+        <!-- <span class="material-symbols-outlined">
         chevron_left
-        </span></button>
+        </span> -->
+        <img src="../../assets/img/arrow-prev-small-svgrepo-com.svg" alt="">
+      </button>
       
       <div class="pop">
         <div class="popularScrollcontainer" #poplist>
           <a class="popularRecipeCard" *ngFor="let popRecipe of popularRecipes"routerLink="/product/{{popRecipe.recipe_id}}">
-            <img src="{{popRecipe.ImageUrl}}" alt="">
+            <img class="popularRecipeImg" src="{{popRecipe.ImageUrl}}" alt="">
             <div class="likes">
              
                 <div  class="likeicon">
-                  <mat-icon  class="heart">favorite</mat-icon>
+                  <!-- <mat-icon  class="heart">favorite</mat-icon> -->
+                  <img class="favIcon" src="../../assets/img/heart-svgrepo-com.svg" alt="">
                 </div>
                 
              
@@ -89,9 +99,12 @@
         </div>
       </div>
       
-      <button class="categorybutton right"id="slideRight" (click)="scrollRight('poplist')"><span class="material-symbols-outlined">
+      <button class="categorybutton right"id="slideRight" (click)="scrollRight('poplist')">
+        <!-- <span class="material-symbols-outlined">
         chevron_right
-        </span></button>
+        </span> -->
+        <img src="../../assets/img/arrow-next-small-svgrepo-com.svg" alt="">
+      </button>
       <!-- <div class="popularbackgraound">
           
       </div> -->

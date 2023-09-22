@@ -4,9 +4,11 @@
     <mat-drawer #drawer class="drawer"  position="end">
       <div class="banner">
         <div class="imgname">
-          <img class="userimg" src="../assets/img/17539364_5881910.webp" alt=""><h4>{{userdata?.username}}</h4><span class="material-symbols-outlined">
+          <img class="userimg" src="../assets/img/17539364_5881910.webp" alt=""><h4>{{userdata?.username}}</h4>
+          <!-- <span class="material-symbols-outlined">
             edit
-            </span>
+            </span> -->
+            <!-- <img src="../assets/img/edit-alt-2-svgrepo-com.svg" alt=""> -->
         </div>
      
       </div>
@@ -25,10 +27,13 @@
           <a href="">Review</a>
           <a href="">About us</a> -->
           <button *ngIf="!token" class="loginButton" routerLink="/login">Log in</button>
-          <span  *ngIf="token" style="vertical-align:middle" class="material-symbols-outlined"  (click)="drawer.toggle()">
+         
+            <img class="accountIcon" *ngIf="token"  (click)="drawer.toggle()" src="../assets/img/user-svgrepo-com.svg" alt="">
+          
+          <!-- <span  *ngIf="token" style="vertical-align:middle" class="material-symbols-outlined"  (click)="drawer.toggle()">
             account_circle
             </span>
-          
+           -->
         
         </div>
       

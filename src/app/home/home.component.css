@@ -60,7 +60,7 @@
 }
 
 .bannercontent {
-  font-family: Rockwell, 'Rockwell regular', monospace !important;
+  font-family: Rockwell, !important;
   margin: 10vw;
   max-width: 50%;
 
@@ -131,6 +131,9 @@
   margin-top: 4vw;
 }
 
+.categorybutton img{
+ width: 50%;
+}
 .titleandsearch {
   display: flex;
   justify-content: space-between;
@@ -227,7 +230,10 @@ a {
 
 .popularRecipeCard {
   position: relative;
-  background-color: #fdd0bb;
+  /* background-color: #fdd0bb; */
+  background-color: #efedec;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 0px #2325;
   width: 12vw;
   height: 13vw;
   color: #f13f3c;
@@ -240,6 +246,9 @@ a {
 
 
 }
+ .favIcon{
+  width: 100%;
+ }
 
 .popularScrollcontainer {
   display: flex;
@@ -252,9 +261,9 @@ a {
 .popularRecipeCard h3{
   font-size: 1vw;
 }
-.popularRecipeCard img {
+.popularRecipeCard .popularRecipeImg {
   width: 12vw;
-  height: 30vh;
+  height: 37vh;
 }
 
 .popularbackgraound {
@@ -282,10 +291,14 @@ a {
 .productcard {
   display: flex;
   flex-direction: column;
-  width: 16vw;
+  width: 12vw;
   height: 100%;
   margin: 1vw;
   text-align: center;
+  background-color: #efedec;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 0px #2325;
+  
 
 
 }
@@ -302,14 +315,17 @@ a {
 
 .productcard img {
   height: 10vw;
-  width: 16vw;
+  width: 12vw;
 }
 
 .productCardCaption {
   text-align: center;
-  background-color: #ffe7dc;
+  /* background-color: #ffe7dc; */
+  background-color: #efedec;
   color: #de4d49;
   font-size: 1vw;
+
+  border-radius: 5px;
 
 }
 
@@ -435,15 +451,15 @@ input:focus {
   .popularRecipeCard{
     width: 38vw;
     height: 43vw;
-    margin: 1vw;
+    margin: 2vw;
     background-color: #efedec;
     border-radius: 5px;
     box-shadow: 0px 1px 5px 0px #2325;
   }
-  .popularRecipeCard img{
+  .popularRecipeCard .popularRecipeImg{
     border-radius: 5px 5px 0 0;
     width: 38vw;
-    height: 20vh;
+    height: 38vh;
   }
 .likes{
   font-size: 3vw;
@@ -468,7 +484,7 @@ input:focus {
 .productFeild{
   width: 90%;
   margin: 2vw 5vw;
-  justify-content: space-evenly;
+
   
 }
 .productcard img {
@@ -479,6 +495,7 @@ input:focus {
 .productcard{
   width: 38vw;
   height: 42vw;
+  margin: 3vw;
   background-color: #efedec;
   border-radius: 5px;
   box-shadow: 0px 1px 5px 0px #2325;
