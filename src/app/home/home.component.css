@@ -60,7 +60,7 @@
 }
 
 .bannercontent {
-  font-family: Rockwell, 'Rockwell regular', monospace;
+  font-family: Rockwell, 'Rockwell regular', monospace !important;
   margin: 10vw;
   max-width: 50%;
 
@@ -405,7 +405,7 @@ input:focus {
   overflow: scroll;
 }
 .conts{
-  width: 90%;
+  width: 100%;
 }
 .card{
   width: 40vw;
@@ -430,16 +430,20 @@ input:focus {
     width: 100%;
   }
   .pop{
-    width: 70%;
+    width: 100%;
   }
   .popularRecipeCard{
-    width: 30vw;
-    height: 35vw;
+    width: 38vw;
+    height: 43vw;
     margin: 1vw;
+    background-color: #efedec;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 0px #2325;
   }
   .popularRecipeCard img{
-    width: 30vw;
-    height: 30vh;
+    border-radius: 5px 5px 0 0;
+    width: 38vw;
+    height: 20vh;
   }
 .likes{
   font-size: 3vw;
@@ -451,6 +455,9 @@ input:focus {
   width: 4vw;
   height: 4vw;
 }
+.recipes{
+  width: 80%
+}
 .popularRecipes{
   margin: 10vw 0;
 }
@@ -459,18 +466,27 @@ input:focus {
 }
 
 .productFeild{
-  width: 80%;
+  width: 90%;
+  margin: 2vw 5vw;
+  justify-content: space-evenly;
   
 }
 .productcard img {
-  height: 22vw;
-  width: 26vw;
+  border-radius: 5px 5px 0 0;
+  height: 30vw;
+  width:38vw;
 }
 .productcard{
-  width: 26vw;
+  width: 38vw;
+  height: 42vw;
+  background-color: #efedec;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 0px #2325;
 }
 .productCardCaption{
+  background-color: #efedec;
   font-size: 2.5vw;
+  border-radius: 5px 5px 0 0;
 }
 
 input, mat-select{
