@@ -234,6 +234,8 @@ a{
     width: 38vw;
   height: 42vw;
   margin: 3vw;
+  background-color: #efedec;
+    
   }
   .productcard img{
     border-radius: 5px 5px 0 0;

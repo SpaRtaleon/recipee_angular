@@ -60,7 +60,7 @@
 }
 
 .bannercontent {
-  font-family: Rockwell, !important;
+  font-family: Rockwell, 'Rockwell regular', monospace !important;
   margin: 10vw;
   max-width: 50%;
 
