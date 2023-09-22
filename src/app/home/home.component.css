@@ -47,6 +47,7 @@
 }
 
 .bannercontent h1 {
+  font-family: 'Roboto Slab', serif !important;
   line-height: 4vw;
   font-size: 3vw;
 }
@@ -60,9 +61,10 @@
 }
 
 .bannercontent {
-  font-family: Rockwell, 'Rockwell regular', monospace !important;
+ 
   margin: 10vw;
   max-width: 50%;
+
 
 }
 
@@ -388,7 +390,7 @@ input:focus {
     height: 70vw;
   }
   .bannercontent h1{
-    font-family: Rockwell, 'Rockwell regular', monospace;
+    font-family: Rockwell, 'Rockwell regular', monospace !important;
     line-height: 10vw;
     font-size: 7vw;
   }
