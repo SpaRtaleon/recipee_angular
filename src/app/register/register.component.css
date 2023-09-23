@@ -64,7 +64,7 @@ button:hover{
     height: 2rem;
     border: none;
     width: 100%;
-    margin: 1rem 1rem 0;
+    /* margin: 1rem 1rem 0; */
     border-radius: 4px;
   }
   input:focus{
@@ -76,7 +76,10 @@ button:hover{
   .error{
     color: #f13f3c;
   }
-
+.elements{
+  width: 100%;
+  margin: 1rem;
+}
   @media(max-width: 600px){
     .ss{
       width: 80%;

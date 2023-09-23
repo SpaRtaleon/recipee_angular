@@ -33,7 +33,6 @@ export class RegisterComponent implements OnInit{
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.registerForm)
     // stop here if form is invalid
     if (this.registerForm.invalid) {
       this.toastr.error("Please Fill The Form !");
