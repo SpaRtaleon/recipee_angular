@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service/service.service';
 import { category } from '../home/home.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +11,7 @@ import { category } from '../home/home.component';
 export class SearchComponent  implements OnInit{
 
 
-  constructor( private apiService:ServiceService){  }
+  constructor( private apiService:ServiceService,private toastr:ToastrService){  }
   recipes:any;
   Searchdata: any;
   ingredientList: any;
@@ -23,7 +24,6 @@ export class SearchComponent  implements OnInit{
   ngOnInit() {
     this.apiService.getCategory().subscribe((data: any) => {
       this.category = data;
-      console.log(this.category);
     });
 
     // this.apiService.getPopularRecipe().subscribe((data) => {
@@ -32,7 +32,7 @@ export class SearchComponent  implements OnInit{
     // });
     this.apiService.getRecipeAll().subscribe((data) => {
       this.recipes = data;
-      console.log(this.recipes, 'recipes');
+    
     });
     this.getIngedients();
 
@@ -46,14 +46,12 @@ export class SearchComponent  implements OnInit{
     this.searchQuery='';
     this.apiService.getRecipeAll().subscribe((data) => {
       this.recipes = data;
-      console.log(this.recipes, 'recipes');
     });
   }
   getIngedients() {
     this.apiService.getIngredients().subscribe((data: any) => {
       this.ingredientList = data;
-      console.log(this.ingredientList, 'ingredients');
-      console.log(data, 'data');
+
     });
   }
 
@@ -63,17 +61,15 @@ export class SearchComponent  implements OnInit{
 
     if (this.ingredients?.length > 0) {
       queryParams.ingredient = this.ingredients.join(',');
-      console.log(queryParams.ingredient, 'queeryparaingre');
     }
 
     if (this.categories?.length > 0) {
       queryParams.category = this.categories.join(',');
-      console.log(queryParams.category, 'queeryparaingre');
+
     }
 
     if (this.searchQuery.trim() !== '') {
       queryParams.name = this.searchQuery;
-      console.log(queryParams.name, 'queeryparaingre');
     }
 
     this.apiService.getRecipesByFilter(queryParams).subscribe(
@@ -81,6 +77,7 @@ export class SearchComponent  implements OnInit{
         this.recipes = response;
       },
       (error) => {
+        this.toastr.error('Something went wrong.. Please try again later!!')
         console.error('Error fetching filtered recipes:', error);
       }
     );
