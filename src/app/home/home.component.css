@@ -390,7 +390,7 @@ input:focus {
     height: 70vw;
   }
   .bannercontent h1{
-    font-family: Rockwell, 'Rockwell regular', monospace !important;
+    font-family: 'Roboto Slab', serif !important;
     line-height: 10vw;
     font-size: 7vw;
   }
