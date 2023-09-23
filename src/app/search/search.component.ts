@@ -30,10 +30,10 @@ export class SearchComponent  implements OnInit{
     //   this.popularRecipes = data;
     //   console.log(this.popularRecipes, 'popular');
     // });
-    // this.apiService.getRecipeAll().subscribe((data) => {
-    //   this.recipes = data;
-    //   console.log(this.recipes, 'recipes');
-    // });
+    this.apiService.getRecipeAll().subscribe((data) => {
+      this.recipes = data;
+      console.log(this.recipes, 'recipes');
+    });
     this.getIngedients();
 
 

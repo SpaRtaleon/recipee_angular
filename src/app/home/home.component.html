@@ -156,7 +156,7 @@
 
   <div class="productFeild" *ngIf="recipes?.length">
     <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}">
-      <img src="{{recipe.ImageUrl}}" alt="">
+      <img src="{{recipe?.ImageUrl}}" alt="">
       <div class="productCardCaption">
         <h3>{{recipe.RecipeName}}</h3>
 

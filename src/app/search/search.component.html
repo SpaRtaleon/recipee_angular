@@ -27,7 +27,40 @@
               <button (click)="clear()" style="background-color: #e3681bf7;">Clear</button>
           
             </div>
+
+
+
+
     </div>
+
+    <h2 class="catTitle">Categories</h2>
+    <div class="conts"#catslist id="conts">
+   
+      <div *ngFor="let cat of category" >
+        <div class="card" *ngIf="cat.active">
+          <a routerLink="/category/{{cat.id}}">
+            <img class="catImg" src="{{cat.img}}" alt="">
+            <h3>{{cat.title}}</h3>
+          </a>
+
+        </div>
+      </div>
+    
+     
+    </div>
+    <h2 class="productTitle">Recipes</h2>
+    <div class="recipes">
+      <div class="productcard"  *ngFor="let recipe of recipes" routerLink="/product/{{recipe.id}}">
+        <img src="{{recipe?.ImageUrl}}" alt="">
+        <div class="productCardCaption">
+          <h3>{{recipe.RecipeName}}</h3>
   
+        </div>
+        </div>
+    </div>
+    
+        
+                
+   
 </div>
 
