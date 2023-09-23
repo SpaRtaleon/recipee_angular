@@ -64,7 +64,7 @@ button:hover{
     height: 2rem;
     border: none;
     width: 100%;
-    margin: 1rem;
+    margin: 1rem 1rem 0;
     border-radius: 4px;
   }
   input:focus{
@@ -72,6 +72,9 @@ button:hover{
     outline: none;
     border: aquamarine;
     border-bottom-style: groove;
+  }
+  .error{
+    color: #f13f3c;
   }
 
   @media(max-width: 600px){
