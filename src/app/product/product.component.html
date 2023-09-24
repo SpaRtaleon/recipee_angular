@@ -12,18 +12,26 @@
                     <!-- <span class="material-symbols-outlined" style="margin: 5px;">
                         schedule
                         </span> -->
-                        <img src="../../assets/img/time-svgrepo-com.svg"style="margin: 5px;width: 25%;" alt="">
+                        <img src="../../assets/img/clock.svg"style="width: 40%;" alt="">
                         {{recipe?.DurationTime}}
                 </div>
               
                 <div [ngClass]="{'difficulty-moderate': recipe?.Difficulty_Level === 'Moderate', 'difficulty-easy' : recipe?.Difficulty_Level === 'Easy','difficulty-hard': recipe?.Difficulty_Level === 'Hard' }">
+                    
+                    <img class="difficultyImg" src="../../assets/img/cooking-stew.svg" alt="">
                     <span style="margin: 5px;" > {{recipe?.Difficulty_Level}}</span>
                 </div>
+                <div class="likes">
+                        <img src="../../assets/img/like.svg"style="width: 40%;" alt="">
+                       
+                </div>
+              
 
             </div>
         </div>
         <div class="img">
-            <img class="bannerImg" src="{{recipe.ImageUrl}}" alt="">
+            <img class="bannerImg" src="{{recipe?.ImageUrl}}" alt="">
+            <h1 class="recipename">{{recipe?.RecipeName}}</h1>
         </div>
     </div>
 
@@ -34,8 +42,19 @@
             
            
             <div class="ingreList" *ngFor="let ingredient of ingredients">
+                <img class="ingredientImg" src="{{ingredient?.ingredient?.IngredientImg}}" alt="">
+                
                 <span style="margin: 1rem;">
-                    {{ingredient.ingredient.IngredientName}} {{ingredient.quantity}}{{ingredient.unit}}
+                    
+                    {{ingredient?.ingredient?.IngredientName}} 
+                    <div>
+                        <small>
+                            {{ingredient?.quantity | number}}{{ingredient?.unit}}
+    
+                        </small>
+                    </div>
+                   
+                  
                 </span>
             </div>
             <!-- <h4>Instruction</h4> -->

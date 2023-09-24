@@ -120,12 +120,13 @@
   text-shadow: 10px 10px 10px #2327;
 }
 
-.categoryfield h2 {
+.categoryfield h2 ,.productTitle{
   color: #ee1818;
   /* font-weight: normal; */
   margin-left: 5vw;
-  font-family: rockwell;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
+  text-align: center;
 
 }
 
@@ -182,7 +183,7 @@ a {
 
 .popularRecipes h2 {
   color: #ee1818;
-  font-family: rockwell;
+  font-family: 'Josefin Sans', sans-serif;
   margin-left: 5vw;
   font-weight: 500;
   font-size: 1.5vw;
@@ -475,7 +476,9 @@ input:focus {
 .popularRecipeCard h3{
   font-size: 3vw;
 }
-
+.productTitle{
+  font-size: 5vw;
+}
 .productFeild{
   width: 90%;
   margin: 2vw 5vw;

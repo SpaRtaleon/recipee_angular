@@ -83,9 +83,10 @@ a{
   color: #f13f3c;
   text-transform: capitalize;
   font-size: 3vw;
+  font-family: 'Roboto Slab', serif !important;
 }
 .caption h4{
-    font-family: 'Rockwell regular', monospace;
+  font-family: 'Fira Sans', sans-serif;
     line-height: 2.5vw;
     letter-spacing: 1px;
     font-weight: normal;
@@ -122,14 +123,7 @@ a{
     height: 10vw;
     border-radius: 5vw;
   }
-  .categoryfield h2{
-    color: #ee1818;
-    /* font-weight: normal; */
-    margin-left: 5vw;
-    font-family: rockwell;
-    font-weight: normal;
-    
-  }
+
   .categoryfield{
   margin-top: 6%;
   font-size: 1.2vw;
@@ -169,13 +163,7 @@ a{
     color: #f35450;
     
   }
-  .material-symbols-rounded {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
+ 
 .productFeild{
   display: flex;
   flex-direction: row;

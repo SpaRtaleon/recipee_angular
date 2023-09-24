@@ -10,16 +10,23 @@
     width: 100%;
 
 }
+.recipename{
+    display: none;
+}
 .bannerContent{
     margin-left: 5vw;
+    font-family: 'Fira Sans', sans-serif;
     /* background-color: #e8f0fe;
     text-shadow: 5px 5px 5px #2327; */
 }
 .bannerContent h1{
 
     color: #f13f3c;
-    font-family: 'Rockwell regular', monospace;
+    font-family: 'Roboto Slab', serif !important;
     font-size: 3vw;
+}
+.ingredientImg{
+    width: 4vw;
 }
 .bannerContent h4{
     
@@ -28,6 +35,7 @@
     font-weight: normal;
     width: 95%;
     text-align: justify;
+    
     
 
 }
@@ -44,33 +52,39 @@
     width: 6rem;
     
 }
+.difficultyImg{
+    width: 40%;
+}
+.likes{
+    margin: 2vw;
+}
 .difficulty-moderate{
-    background-color: orange;
+    /* background-color: orange; */
     /* height: 2rem; */
     display: flex;
     border-radius: 1rem;
     align-items: center;
     justify-content: center;
-    color: #f0eded;
+    color: orange;
     width: 5rem;
     
 }
 .difficulty-easy{
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     border-radius: 1rem;
     align-items: center;
     justify-content: center;
     width: 5rem;
-    color: #f0eded;
+    color: #4ccc28;
 }
 .difficulty-hard{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     border-radius: 1rem;
     align-items: center;
     justify-content: center;    
-    color: #f0eded;
+    color: red;
     width: 5rem;
 }
 
@@ -83,9 +97,11 @@
 }
 .ingredientFeild{
     margin: 5vw;
+    font-family: 'Fira Sans', sans-serif;
 }
 .ingredientFeild h2{
     color: #f13f3c;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .ingredient{
     display: flex;
@@ -94,49 +110,83 @@
 
 }
 .ingreList{
-         background-color: #e8eeec;
+         /* background-color: #e8eeec; */
          height: 3rem;
          display: flex;
          align-items: center;
          border-radius: 5px;
         color: green;
         margin: 1rem;
+        box-shadow: 5px 5px 10px #ccc7c7;
+        padding: 1vw;
 }
 
 .directionFeild{
     margin: 5vw 5vw 10vw;
+    font-family: 'Fira Sans', sans-serif;
 }
 .directionFeild h2{
     color: #f13f3c;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .instruct{
-    padding: 1rem;
-    margin: 1rem;
-    background-color: aliceblue;
+    margin: 2vw;
+    box-shadow: 0px 0px 5px #ccc7c7;
+    border-radius: 5px;
+    padding: 2vw;
 }
 
 
 @media(max-width: 600px){
     .banner{
         flex-direction: column-reverse;
+        position: relative;
     }
     .bannerContent{
         width: 100%;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+      
+    }
+    .recipename{
+        display: flex;
+        color: #f13f3c;
+        font-family: 'Roboto Slab', serif !important;
+        font-size: 5vw;
+        width: 100%;
+        /* box-shadow: 0px 2px 5px #9d9a9a;
+        position: absolute; */
+        /* background-color: white; */
+        bottom: -10px;
+        /* text-align: center; */
+        height: 20%;
+        align-items: center;
+        justify-content: center;
     }
     .bannerContent h1{
+        display: none;
         font-size: 5vw;
         text-align: center;
     }
     .bannerContent h4{
-       
+       display: none;
         line-height: 6vw;
         text-align: justify;
         font-size: 4vw;
     }
+    .additional{
+        width: 80%;
+        box-shadow: 5px 2px 5px #9d9a9a;
+        border-radius: 0 0 2vw 2vw;
+        justify-content: space-between;
+    }
     .img{
         margin: 0;
         width: 100%;
+        position: relative;
     }
 
     .difficulty-easy,.difficulty-hard,.difficulty-moderate{
@@ -151,13 +201,23 @@
         font-size: 5vw;
     }
     .ingredientFeild h2{
-        font-size: 5vw;
+        font-size: 5.5vw;
     }
     .ingredientFeild p{
         font-size: 3vw;
     }
+    .ingreList{
+        padding: 2vw;
+    }
+    .instruct{
+        margin: 5vw;
+        padding: 3vw;
+    }
     .ingredient{
         display: inline;
+    }
+    .ingredientImg{
+        width: 10vw;
     }
     .instruction {
         font-size: 4vw;
