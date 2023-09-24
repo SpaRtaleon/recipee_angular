@@ -206,6 +206,7 @@ a{
   /* background-color: #ffe7dc; */
   background-color: #efedec;
   color: #de4d49;
+  font-size: 1vw;
 }
 
 @media(max-width: 600px){

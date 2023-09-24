@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select'
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ToastrModule, provideToastr } from 'ngx-toastr';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
@@ -46,6 +47,7 @@ import { SearchComponent } from './search/search.component';
     MatSelectModule,
     MatAutocompleteModule,
     ToastrModule.forRoot(),
+    NgHttpLoaderModule.forRoot(),
     
     HttpClientModule,
     FormsModule,
